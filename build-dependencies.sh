@@ -22,8 +22,8 @@ if [[ $(echo "$MIN_GO_VERSION $GO_VERSION" | tr " " "\n" | sort -V | head -n 1) 
 fi
 
 
-PRYSM_DIR=./dependencies1/prysm
-GETH_DIR=./dependencies1/go-ethereum
+PRYSM_DIR=./dependencies/prysm
+GETH_DIR=./dependencies/go-ethereum
 
 ( cd $PRYSM_DIR && go build -o=./out/beacon-chain ./cmd/beacon-chain && go build -o=./out/validator ./cmd/validator && go build -o=./out/prysmctl ./cmd/prysmctl )
 
